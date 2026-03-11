@@ -1,0 +1,179 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hola",
+        "Hey",
+        "Buenas",
+        "Saludos",
+        "Qué tal",
+        "Hola AI-Sir",
+        "Estás ahí?",
+        "Inicio",
+        "Buenos días",
+        "Buenas tardes",
+        "alo"
+      ],
+      "responses": [
+        "Iniciando protocolos. Soy AI-Sir. ¿En qué te ayudo?",
+        "Sistemas en línea. A la espera de instrucciones.",
+        "Hola. Soy tu asistente experto."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Adios",
+        "Hasta luego",
+        "Bye",
+        "Salir",
+        "Nos vemos",
+        "Apagar",
+        "Cerrar",
+        "Chau"
+      ],
+      "responses": [
+        "Terminando sesión.",
+        "Hasta la próxima.",
+        "Desconexión exitosa."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Gracias",
+        "Te lo agradezco",
+        "Muchas gracias",
+        "Ty",
+        "Excelente",
+        "Buen trabajo",
+        "Genial",
+        "ok gracias"
+      ],
+      "responses": [
+        "De nada.",
+        "A su servicio.",
+        "No hay de qué."
+      ]
+    },
+    {
+      "tag": "identity",
+      "patterns": [
+        "Quien eres?",
+        "Como te llamas?",
+        "Que eres?",
+        "Eres real?",
+        "Presentate",
+        "Identificate",
+        "Tu nombre"
+      ],
+      "responses": [
+        "Soy AI-Sir, una inteligencia artificial diseñada para programar y escribir.",
+        "Me llamo AI-Sir."
+      ]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": [
+        "Que puedes hacer?",
+        "Para que sirves?",
+        "Cuales son tus funciones?",
+        "Ayudame",
+        "Que sabes hacer",
+        "genera un codigo"
+      ],
+      "responses": [
+        "Puedo generar código (Python, JS), explicar hacking ético o ayudarte con historias. Prueba: 'Genera un reloj en Python' o 'Explica SQL Injection'.",
+        "Soy experto en código y seguridad. Pídeme scripts específicos como una calculadora o un escáner de puertos."
+      ]
+    },
+    {
+      "tag": "code_clock_python",
+      "patterns": [
+        "Genera un codigo que simule un reloj",
+        "haz un reloj en python",
+        "codigo de reloj digital",
+        "reloj python tkinter",
+        "script de reloj",
+        "dame un codigo de reloj",
+        "genera codigo de reloj",
+        "genera un reloj",
+        "quiero un reloj",
+        "codigo reloj"
+      ],
+      "responses": [
+        "Aquí tienes un reloj digital con Python y Tkinter:\n\nimport tkinter as tk\nfrom time import strftime\n\nroot = tk.Tk()\nroot.title('Reloj Digital')\n\ndef time():\n    string = strftime('%H:%M:%S %p')\n    lbl.config(text=string)\n    lbl.after(1000, time)\n\nlbl = tk.Label(root, font=('calibri', 40, 'bold'), background='black', foreground='cyan')\nlbl.pack(anchor='center')\ntime()\nroot.mainloop()"
+      ]
+    },
+    {
+      "tag": "code_calc_python",
+      "patterns": [
+        "haz una calculadora",
+        "codigo calculadora python",
+        "calculadora simple python",
+        "script calculadora",
+        "genera una calculadora",
+        "codigo calculadora"
+      ],
+      "responses": [
+        "Aquí tienes una calculadora simple en Python:\n\ndef add(x, y): return x + y\ndef subtract(x, y): return x - y\n\nprint('Selecciona operación:')\nprint('1.Suma 2.Resta')\nchoice = input('Opcion(1/2): ')\nnum1 = float(input('Num 1: '))\nnum2 = float(input('Num 2: '))\n\nif choice == '1': print(num1, '+', num2, '=', add(num1, num2))\nelif choice == '2': print(num1, '-', num2, '=', subtract(num1, num2))"
+      ]
+    },
+    {
+      "tag": "hacking_script_portscanner",
+      "patterns": [
+        "haz un escaner de puertos",
+        "codigo python nmap",
+        "port scanner script",
+        "escaner de puertos python",
+        "genera un escaner"
+      ],
+      "responses": [
+        "Ejemplo educativo de Port Scanner (socket):\n\nimport socket\ntarget = '127.0.0.1'\n\nfor port in range(20, 85):\n    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    s.settimeout(0.5)\n    result = s.connect_ex((target, port))\n    if result == 0:\n        print(f'Puerto {port} ABIERTO')\n    s.close()"
+      ]
+    },
+    {
+      "tag": "python_decorators",
+      "patterns": [
+        "Qué son los decoradores",
+        "decoradores python",
+        "explica @ en python",
+        "wrappers python funcion",
+        "python decorators avanzado",
+        "explicar decorador"
+      ],
+      "responses": [
+        "EXPLICACIÓN EXPERTA: Un decorador en Python para @func es equivalente a func = decorador(func). Es un patrón estructural para extender funcionalidad sin modificar el código original."
+      ]
+    },
+    {
+      "tag": "hacking_sql_injection",
+      "patterns": [
+        "Como hacer sql injection",
+        "que es sqli",
+        "blind sql injection",
+        "prevenir inyeccion sql",
+        "' OR 1=1",
+        "sqli ejemplos"
+      ],
+      "responses": [
+        "HACKING & DEFENSA: SQL Injection (SQLi) explota inputs no sanitizados. Tipos: In-band, Blind, Out-of-band. Defensa: Usar SIEMPRE Prepared Statements."
+      ]
+    },
+    {
+      "tag": "fic_au_ideas",
+      "patterns": [
+        "Ideas para AU",
+        "Alternate Universe ejemplos",
+        "coffee shop au",
+        "soulmate au variaciones",
+        "trope au",
+        "ideas universos alternativos"
+      ],
+      "responses": [
+        "FANFIC IDEAS: AUs (Alternate Universes). Canon Divergence, Soulmate AUs, Mundane AUs (Coffee Shop). La clave es mantener la esencia del personaje."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Sir | Advanced Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-ai">AI</span><span class="logo-dash">-</span><span class="logo-sir">SIR</span>
+            </div>
+            <p class="subtitle">Neural Interface v1.0 • Expert Mode</p>
+        </header>
+
+        <main class="chat-interface">
+            <div class="chat-window" id="chat-window">
+                <div class="message bot-message">
+                    <div class="avatar bot-avatar">AI</div>
+                    <div class="text">
+                        Bienvenido. Soy <strong>AI-Sir</strong>.<br>
+                        Modo experto cargado: 
+                        <span class="tag tech">Programación</span> 
+                        <span class="tag hack">Hacking Ético</span> 
+                        <span class="tag writer">Escritura</span><br><br>
+                        ¿En qué puedo asistirte hoy?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Escribe tu comando o pregunta..." autocomplete="off">
+                <button id="send-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
